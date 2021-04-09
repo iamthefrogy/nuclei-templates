@@ -1,0 +1,17 @@
+id: IIS7-default-webpage
+
+info:
+  name: IIS7 Default Webpage
+  author: iamthefrogy
+  severity: low
+  tags: mics,default,login,iis,ii7
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers:
+      - type: word
+        words:
+          - <title>IIS7</title>
